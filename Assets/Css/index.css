@@ -1,0 +1,316 @@
+@font-face {
+  font-family: "roboto";
+  src: url(/Assets/Font/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+body {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /* position: sticky;
+  top: 0; */
+}
+nav a {
+  padding: 15px;
+}
+a {
+  color: rgb(41, 169, 185);
+}
+nav :hover {
+  color: pink;
+  border-top: 5px solid rgb(41, 169, 185);
+  transition: 2sec;
+}
+h1 {
+  text-transform: uppercase;
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  left: 40px;
+  top: 0;
+}
+
+.image_carrousel i {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  z-index: 0;
+}
+.text_carrousel {
+  position: absolute;
+  left: 60px;
+  top: 150px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  color: white;
+}
+strong {
+  color: rgb(41, 169, 185);
+}
+
+button {
+  background: rgb(41, 169, 185);
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+p {
+  padding: 15px;
+}
+
+i {
+  color: rgb(118, 189, 199);
+}
+/*Section Nos services*/
+
+/* *************** Partie haute ************ */
+.services {
+  display: flex;
+  flex-direction: column;
+}
+.container_top {
+  text-align: center;
+  margin: 0 auto;
+  width: 50vh;
+}
+h2 {
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 50px;
+}
+p {
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+.separation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator {
+  width: 80px;
+  border-bottom: 1px solid grey;
+}
+.separation i {
+  font-size: 9px;
+  z-index: 10;
+}
+
+/* ******************* Partie basse ************* */
+.container_buttom {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.right {
+  width: 55%;
+  left: 50px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas:
+    "logo1 text1"
+    "logo2 text2"
+    "logo3 text3";
+  margin: 0 auto;
+}
+
+.left {
+  width: 45%;
+}
+
+.cercle {
+  width: 4em;
+  height: 4em;
+  border: 2px solid rgb(112, 171, 207);
+  border-radius: 50%;
+  margin-top: 1.5em;
+  border-top: none;
+  border-right: none;
+  margin-left: 10%;
+  position: relative;
+  animation: rotating 5s infinite linear;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.petitpoint2 {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(112, 171, 207);
+  border-radius: 50%;
+  border: 1.5px solid white;
+  z-index: 3;
+  position: absolute;
+  left: 15%;
+  top: -5%;
+}
+
+.contcercle {
+  z-index: 15;
+  position: relative;
+}
+
+.contcercle i {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+/* .logo1 {
+  margin: 0 auto;
+  transform: rotate(360°);
+}
+.cercle {
+  border: 2px solid gray;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  transform: rotate(360);
+}
+#petitLogo1 {
+  grid-area: logo1;
+  text-align: center;
+}
+.rond {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  color: rgb(118, 189, 199);
+} */
+
+/* ********************************* Section projet ***************** */
+.projet {
+  background: rgb(236, 233, 233);
+}
+
+.selection {
+  margin: 10px;
+  padding: 10px;
+  background: rgb(214, 211, 211);
+  color: grey;
+  border-radius: 5px;
+}
+.selection a:hover {
+  color: white;
+  background: rgb(41, 169, 185);
+}
+.projet {
+  margin: 25px;
+  height: 75vh;
+}
+.projets_icones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+.projets_icones img {
+  width: 250px;
+}
+figure {
+  position: relative;
+  padding: 10px;
+}
+figcaption {
+  position: absolute;
+  text-align: center;
+  width: 250px;
+  height: 84px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.664);
+  color: white;
+  opacity: 0;
+}
+figcaption:hover {
+  opacity: 1;
+  transition: 2sec;
+}
+
+/* ************************ Partie contact ******************* */
+.contact {
+  position: relative;
+}
+iframe {
+  position: absolute;
+  width: 90vw;
+  height: 700px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.filtre {
+  position: relative;
+  width: 90vw;
+  height: 700px;
+  background-color: rgba(25, 25, 253, 0.164);
+  z-index: 3;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.contact {
+  position: relative;
+}
+.formulaire {
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.74);
+  top: 60px;
+  right: 70px;
+  width: 25%;
+  height: 480px;
+  padding: 15px;
+}
+.formulaire h3 {
+  text-transform: uppercase;
+}
+.formulaire h4 {
+  text-align: left;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.div_input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+textarea {
+  resize: none;
+}
